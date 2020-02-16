@@ -1,6 +1,8 @@
 package com.servletnjsp.jb;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class SimpleServlet
  */
-
+@WebServlet("/SimpleServlet")
 public class SimpleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -35,7 +37,11 @@ public class SimpleServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+
+		String name = request.getParameter("userName");
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		out.println("Inside Post menthod name = " + name);
 	}
 
 }

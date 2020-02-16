@@ -10,13 +10,4 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-  <servlet>
-	  <servlet-name>xmlServletMapping</servlet-name>
-	  <servlet-class>com.servletnjsp.jb.SimpleServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-	  <servlet-name>xmlServletMapping</servlet-name>
-	  <url-pattern>/xmlSimpleServlet</url-pattern>
-  </servlet-mapping>
 </web-app>
